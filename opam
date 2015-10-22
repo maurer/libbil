@@ -1,0 +1,28 @@
+opam-version: "1.2"
+name: "bil"
+version: "master"
+maintainer: "None"
+authors: "Sang Kil Cha"
+homepage: "https://github.com/sangkilc/bil"
+dev-repo: "git://github.com/sangkilc/bil"
+license: "GPL2"
+build: [
+  [make]
+]
+
+install: [
+  [make "install"]
+]
+
+remove: [
+  ["ocamlfind" "remove" "bil"]
+]
+
+depends: [
+    "zarith"
+    "ocamlgraph"
+    "batteries"
+    "camlidl"
+]
+
+available: [ocaml-version >= "4.01.0"]
